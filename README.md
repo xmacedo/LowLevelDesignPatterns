@@ -12,4 +12,6 @@
 8. Command Pattern for Action Encapsulation
 9. Facade Pattern for Simplified Interfaces
 10. Template Method Pattern for Reusable Algorithms
+- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
+[Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
 
