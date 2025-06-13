@@ -1,8 +1,15 @@
 
 # Low-Level Design patterns
-- Low-Level Design (LLD) patterns in Java can elevate your code from functional to phenomenal, impressing your tech lead and making your software more robust. This article explores 10 essential Java LLD patterns, each with practical insights and examples to help you write cleaner, more maintainable code. Whether you’re building a small app or a large system, these patterns will streamline your development process and showcase your skills.
+Low-Level Design (LLD) patterns in Java can elevate your code from functional to phenomenal. 
+This examples explores 10 essential Java LLD patterns, each with practical insights and examples to help you write cleaner, 
+more maintainable code. Whether you’re building a small app or a large system, these patterns will streamline your development process and showcase your skills.
 
 1. Singleton Pattern for Resource Control
+- The Singleton pattern ensures a class has only one instance and provides a global point of access to it, 
+perfect for managing shared resources like database connections. 
+It prevents resource wastage and ensures consistent access across your application. Use it wisely to avoid overcomplicating simple classes.
+- [Singleton Pattern Example]()
+
 2. Factory Pattern for Flexible Object Creation
 3. Builder Pattern for Complex Objects
 4. Strategy Pattern for Swappable Behaviors
@@ -15,3 +22,4 @@
 - The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
 [Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
 
+https://medium.com/@letsCodeDevelopers/want-to-impress-your-tech-lead-use-these-java-lld-patterns-59091ed2b5b1
