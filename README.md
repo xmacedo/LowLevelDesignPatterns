@@ -8,7 +8,7 @@ more maintainable code. Whether you’re building a small app or a large system,
 - The Singleton pattern ensures a class has only one instance and provides a global point of access to it, 
 perfect for managing shared resources like database connections. 
 It prevents resource wastage and ensures consistent access across your application. Use it wisely to avoid overcomplicating simple classes.
-- [Singleton Pattern Example]()
+- [Singleton Pattern Example](src/main/java/com/xmacedo/singleton/SingletonExample.java)
 
 2. Factory Pattern for Flexible Object Creation
 3. Builder Pattern for Complex Objects
@@ -21,5 +21,3 @@ It prevents resource wastage and ensures consistent access across your applicati
 10. Template Method Pattern for Reusable Algorithms
 - The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
 [Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
-
-https://medium.com/@letsCodeDevelopers/want-to-impress-your-tech-lead-use-these-java-lld-patterns-59091ed2b5b1
