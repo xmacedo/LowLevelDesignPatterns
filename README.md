@@ -11,6 +11,10 @@ It prevents resource wastage and ensures consistent access across your applicati
 - [Singleton Pattern Example](src/main/java/com/xmacedo/singleton/SingletonExample.java)
 
 2. Factory Pattern for Flexible Object Creation
+- The Factory pattern delegates object creation to a dedicated factory class, making your code more flexible and easier to extend. 
+It’s ideal when you need to create objects based on conditions, like choosing a payment processor. This pattern reduces tight coupling and simplifies maintenance.
+- [Factory Pattern Example](src/main/java/com/xmacedo/factory/FactoryExample.java)
+
 3. Builder Pattern for Complex Objects
 4. Strategy Pattern for Swappable Behaviors
 5. Observer Pattern for Event Handling
