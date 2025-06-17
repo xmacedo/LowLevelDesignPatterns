@@ -16,6 +16,9 @@ It’s ideal when you need to create objects based on conditions, like choosing 
 - [Factory Pattern Example](src/main/java/com/xmacedo/factory/FactoryExample.java)
 
 3. Builder Pattern for Complex Objects
+- The Builder pattern simplifies constructing objects with many optional fields, like a user profile with varying attributes. 
+It improves readability and avoids constructor bloat. Use it for objects requiring step-by-step configuration.
+  - [Builder Patterrn Example](src/main/java/com/xmacedo/builder/BuilderExample.java)
 4. Strategy Pattern for Swappable Behaviors
 5. Observer Pattern for Event Handling
 6. Decorator Pattern for Flexible Enhancements
