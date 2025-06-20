@@ -23,7 +23,7 @@ It improves readability and avoids constructor bloat. Use it for objects requiri
 4. Strategy Pattern for Swappable Behaviors
 - The Strategy pattern lets you define a family of algorithms and swap them at runtime, like sorting methods for a dataset. 
 It promotes flexibility and reusability, making your code easier to modify without changing core logic.
-
+<br> [Strategy Pattern Example](src/main/java/com/xmacedo/strategy/StrategyExample.java)
 
 
 5. Observer Pattern for Event Handling
