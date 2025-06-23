@@ -61,6 +61,13 @@ This notifies traders when stock prices change.
 ---
 
 6. Decorator Pattern for Flexible Enhancements
+- The Decorator pattern adds functionality to objects dynamically, like adding logging to a service. 
+It’s a cleaner alternative to subclassing for extending behavior. Use it when you need optional features without modifying core classes.
+<br>[Decorator Pattern Example](src/main/java/com/xmacedo/decorator/DecoratorExample.java)
+
+This adds logging without altering **_BasicService_**.
+
+
 7. Adapter Pattern for Compatibility
 8. Command Pattern for Action Encapsulation
 9. Facade Pattern for Simplified Interfaces
