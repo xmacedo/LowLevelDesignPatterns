@@ -67,10 +67,16 @@ It’s a cleaner alternative to subclassing for extending behavior. Use it when 
 
 This adds logging without altering **_BasicService_**.
 
-
 7. Adapter Pattern for Compatibility
+- The Adapter pattern bridges incompatible interfaces, like integrating a legacy system with a modern API.
+<br> [Legacy Pattern Example](src/main/java/com/xmacedo/adapter/AdapterExample.java)
+
+This makes the legacy system compatible with the modern API.
+
+It ensures seamless communication between components, saving time on rewrites. Always document adapters clearly to avoid confusion.
 8. Command Pattern for Action Encapsulation
 9. Facade Pattern for Simplified Interfaces
 10. Template Method Pattern for Reusable Algorithms
-- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
-[Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
+- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. 
+It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
+<br> [Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
