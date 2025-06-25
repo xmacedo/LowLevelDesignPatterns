@@ -16,6 +16,7 @@ It’s ideal when you need to create objects based on conditions, like choosing 
 <br> [Factory Pattern Example](src/main/java/com/xmacedo/factory/FactoryExample.java)
   
 This factory creates the right processor based on input, keeping client code clean.
+
 ![factory-diagram.png](images/factory-diagram.png)
 
 Diagram: Factory Pattern Structure
@@ -57,7 +58,9 @@ It decouples components, making your system more modular. Be cautious of memory 
 <br> [Observer Pattern Example](src/main/java/com/xmacedo/observer/ObserverExample.java)
 
 This notifies traders when stock prices change.
+
 ![Observer-diagram.png](images/Observer-diagram.png)
+
 ---
 
 6. Decorator Pattern for Flexible Enhancements
@@ -67,6 +70,8 @@ It’s a cleaner alternative to subclassing for extending behavior. Use it when 
 
 This adds logging without altering **_BasicService_**.
 
+---
+
 7. Adapter Pattern for Compatibility
 - The Adapter pattern bridges incompatible interfaces, like integrating a legacy system with a modern API.
 <br> [Legacy Pattern Example](src/main/java/com/xmacedo/adapter/AdapterExample.java)
@@ -74,7 +79,29 @@ This adds logging without altering **_BasicService_**.
 This makes the legacy system compatible with the modern API.
 
 It ensures seamless communication between components, saving time on rewrites. Always document adapters clearly to avoid confusion.
+
+---
+
 8. Command Pattern for Action Encapsulation
+- The Command pattern encapsulates actions as objects, enabling undoable operations or queued tasks, like a task scheduler. 
+It decouples the requester from the executor, improving flexibility. Use it for operations requiring history or replay.
+<br> [Command Pattern Example](src/main/java/com/xmacedo/command/CommandExample.java)
+
+This encapsulates tasks for flexible execution.
+
+![command-diagram.png](images/command-diagram.png)
+
+### Diagram: Command Pattern Flow
+```
+   +---------+       +---------+       +---------+
+   | Invoker | ----> | Command | ----> | Receiver|
+   +---------+       +---------+       +---------+
+          |               ^                 |
+          +---------------+-----------------+
+                     execute()
+```
+
+
 9. Facade Pattern for Simplified Interfaces
 10. Template Method Pattern for Reusable Algorithms
 - The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. 
