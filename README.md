@@ -101,9 +101,18 @@ This encapsulates tasks for flexible execution.
                      execute()
 ```
 
+---
+
 
 9. Facade Pattern for Simplified Interfaces
+The Facade pattern provides a simplified interface to a complex subsystem, like a library with multiple modules. 
+It reduces complexity for clients and improves usability. Ensure the facade doesn’t become a bloated catch-all.
+<br> [Facade Example](src/main/java/com/xmacedo/facade/FacadeExample.java)
+
+This simplifies the order process for clients.
+
 10. Template Method Pattern for Reusable Algorithms
-- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, like a report generator. 
+- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, 
+like a report generator. 
 It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
 <br> [Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
