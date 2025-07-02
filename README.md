@@ -1,23 +1,77 @@
+# Low-Level Design Patterns in Java
 
-# Low-Level Design patterns
-Low-Level Design (LLD) patterns in Java can elevate your code from functional to phenomenal. 
-This examples explores 10 essential Java LLD patterns, each with practical insights and examples to help you write cleaner, 
-more maintainable code. Whether you’re building a small app or a large system, these patterns will streamline your development process and showcase your skills.
+Low-Level Design (LLD) patterns in Java can elevate your code from functional to phenomenal. This repository explores 10 essential Java LLD patterns, each with practical insights and examples to help you write cleaner, more maintainable code. Whether you're building a small app or a large system, these patterns will streamline your development process and showcase your skills.
 
-1. Singleton Pattern for Resource Control
-- This pattern ensures a class has only one instance and provides a global point of access to it, 
-perfect for managing shared resources like database connections. 
-It prevents resource wastage and ensures consistent access across your application. Use it wisely to avoid overcomplicating simple classes.
-<br> [Singleton Pattern Example](src/main/java/com/xmacedo/singleton/SingletonExample.java)
+## Table of Contents
+- [1. Singleton Pattern](#1-singleton-pattern-for-resource-control)
+- [2. Factory Pattern](#2-factory-pattern-for-flexible-object-creation)
+- [3. Builder Pattern](#3-builder-pattern-for-complex-objects)
+- [4. Strategy Pattern](#4-strategy-pattern-for-swappable-behaviors)
+- [5. Observer Pattern](#5-observer-pattern-for-event-handling)
+- [6. Decorator Pattern](#6-decorator-pattern-for-flexible-enhancements)
+- [7. Adapter Pattern](#7-adapter-pattern-for-compatibility)
+- [8. Command Pattern](#8-command-pattern-for-action-encapsulation)
+- [9. Facade Pattern](#9-facade-pattern-for-simplified-interfaces)
+- [10. Template Method Pattern](#10-template-method-pattern-for-reusable-algorithms)
+
+## Pattern Categories
+
+### Creational Patterns
+- **Singleton**: Control object instantiation
+- **Factory**: Flexible object creation
+- **Builder**: Complex object construction
+
+### Behavioral Patterns
+- **Strategy**: Swappable algorithms
+- **Observer**: Event-driven communication
+- **Command**: Action encapsulation
+- **Template Method**: Reusable algorithm skeletons
+
+### Structural Patterns
+- **Decorator**: Dynamic feature enhancement
+- **Adapter**: Interface compatibility
+- **Facade**: Simplified subsystem access
+
 ---
-2. Factory Pattern for Flexible Object Creation
-- This pattern delegates object creation to a dedicated factory class, making your code more flexible and easier to extend. 
-It’s ideal when you need to create objects based on conditions, like choosing a payment processor. This pattern reduces tight coupling and simplifies maintenance.
-<br> [Factory Pattern Example](src/main/java/com/xmacedo/factory/FactoryExample.java)
-  
-This factory creates the right processor based on input, keeping client code clean.
 
-![factory-diagram.png](images/factory-diagram.png)
+## 1. Singleton Pattern for Resource Control
+
+**Purpose**: Ensures a class has only one instance and provides a global point of access to it.
+
+**Use Cases**:
+- Database connections
+- Configuration managers
+- Logging services
+
+**Key Benefits**:
+- Prevents resource wastage
+- Ensures consistent access across your application
+- Controls instantiation
+
+**⚠️ Caution**: Use wisely to avoid overcomplicating simple classes.
+
+**📝 [View Example](src/main/java/com/xmacedo/singleton/SingletonExample.java)**
+
+---
+
+## 2. Factory Pattern for Flexible Object Creation
+
+**Purpose**: Delegates object creation to a dedicated factory class, making your code more flexible and easier to extend.
+
+**Use Cases**:
+- Payment processors selection
+- Database driver creation
+- UI component generation
+
+**Key Benefits**:
+- Reduces tight coupling
+- Simplifies maintenance
+- Enables conditional object creation
+
+**📝 [View Example](src/main/java/com/xmacedo/factory/FactoryExample.java)**
+
+### Architecture Diagram
+![Factory Pattern Diagram](images/factory-diagram.png)
 
 Diagram: Factory Pattern Structure
 ```
@@ -35,61 +89,123 @@ Diagram: Factory Pattern Structure
          | CreditCardProc |   | PayPalProcessor |
          +----------------+   +----------------+
 ```
-Caption: Visualizing how the Factory pattern delegates object creation.
 
----
-3. Builder Pattern for Complex Objects
-- This pattern simplifies constructing objects with many optional fields, like a user profile with varying attributes. 
-It improves readability and avoids constructor bloat. Use it for objects requiring step-by-step configuration.
-<br> [Builder Patterrn Example](src/main/java/com/xmacedo/builder/BuilderExample.java)
+--- 
+## 3. Builder Pattern for Complex Objects
 
----
-4. Strategy Pattern for Swappable Behaviors
-- The Strategy pattern lets you define a family of algorithms and swap them at runtime, like sorting methods for a dataset. 
-It promotes flexibility and reusability, making your code easier to modify without changing core logic.
-<br> [Strategy Pattern Example](src/main/java/com/xmacedo/strategy/StrategyExample.java)
+**Purpose**: Simplifies constructing objects with many optional fields through a fluent interface.
 
-This allows switching sorting algorithms without altering DataProcessor.
+**Use Cases**:
+- User profiles with varying attributes
+- Configuration objects
+- Complex data structures
 
----
-5. Observer Pattern for Event Handling
-- The Observer pattern enables objects to listen for changes in another object’s state, ideal for event-driven systems like UI updates. 
-It decouples components, making your system more modular. Be cautious of memory leaks with long-lived observers.
-<br> [Observer Pattern Example](src/main/java/com/xmacedo/observer/ObserverExample.java)
+**Key Benefits**:
+- Improves code readability
+- Avoids constructor bloat
+- Enables step-by-step configuration
 
-This notifies traders when stock prices change.
-
-![Observer-diagram.png](images/Observer-diagram.png)
+**📝 [View Example](src/main/java/com/xmacedo/builder/BuilderExample.java)**
 
 ---
 
-6. Decorator Pattern for Flexible Enhancements
-- The Decorator pattern adds functionality to objects dynamically, like adding logging to a service. 
-It’s a cleaner alternative to subclassing for extending behavior. Use it when you need optional features without modifying core classes.
-<br>[Decorator Pattern Example](src/main/java/com/xmacedo/decorator/DecoratorExample.java)
+## 4. Strategy Pattern for Swappable Behaviors
 
-This adds logging without altering **_BasicService_**.
+**Purpose**: Defines a family of algorithms and allows swapping them at runtime.
+
+**Use Cases**:
+- Sorting algorithms
+- Payment processing strategies
+- Validation rules
+
+**Key Benefits**:
+- Promotes flexibility and reusability
+- Enables runtime algorithm switching
+- Simplifies testing different approaches
+
+**📝 [View Example](src/main/java/com/xmacedo/strategy/StrategyExample.java)**
 
 ---
 
-7. Adapter Pattern for Compatibility
-- The Adapter pattern bridges incompatible interfaces, like integrating a legacy system with a modern API.
-<br> [Legacy Pattern Example](src/main/java/com/xmacedo/adapter/AdapterExample.java)
+## 5. Observer Pattern for Event Handling
 
-This makes the legacy system compatible with the modern API.
+**Purpose**: Enables objects to listen for changes in another object's state.
 
-It ensures seamless communication between components, saving time on rewrites. Always document adapters clearly to avoid confusion.
+**Use Cases**:
+- UI updates
+- Event-driven systems
+- Model-View architectures
+
+**Key Benefits**:
+- Decouples components
+- Makes systems more modular
+- Enables reactive programming
+
+**⚠️ Caution**: Be cautious of memory leaks with long-lived observers.
+
+**📝 [View Example](src/main/java/com/xmacedo/observer/ObserverExample.java)**
+
+### Architecture Diagram
+![Observer Pattern Diagram](images/Observer-diagram.png)
 
 ---
 
-8. Command Pattern for Action Encapsulation
-- The Command pattern encapsulates actions as objects, enabling undoable operations or queued tasks, like a task scheduler. 
-It decouples the requester from the executor, improving flexibility. Use it for operations requiring history or replay.
-<br> [Command Pattern Example](src/main/java/com/xmacedo/command/CommandExample.java)
+## 6. Decorator Pattern for Flexible Enhancements
 
-This encapsulates tasks for flexible execution.
+**Purpose**: Adds functionality to objects dynamically without modifying their structure.
 
-![command-diagram.png](images/command-diagram.png)
+**Use Cases**:
+- Adding logging to services
+- Feature toggles
+- Middleware chains
+
+**Key Benefits**:
+- Cleaner alternative to subclassing
+- Enables optional features
+- Maintains single responsibility
+
+**📝 [View Example](src/main/java/com/xmacedo/decorator/DecoratorExample.java)**
+
+---
+
+## 7. Adapter Pattern for Compatibility
+
+**Purpose**: Bridges incompatible interfaces to enable seamless integration.
+
+**Use Cases**:
+- Legacy system integration
+- Third-party library adaptation
+- API compatibility layers
+
+**Key Benefits**:
+- Ensures seamless communication
+- Saves time on rewrites
+- Enables gradual system migration
+
+**💡 Tip**: Always document adapters clearly to avoid confusion.
+
+**📝 [View Example](src/main/java/com/xmacedo/adapter/AdapterExample.java)**
+
+---
+
+## 8. Command Pattern for Action Encapsulation
+
+**Purpose**: Encapsulates actions as objects, enabling undoable operations and queued tasks.
+
+**Use Cases**:
+- Task schedulers
+- Undo/Redo functionality
+- Macro recording
+
+**Key Benefits**:
+- Decouples requester from executor
+- Enables operation history
+- Supports queuing and logging
+
+**📝 [View Example](src/main/java/com/xmacedo/command/CommandExample.java)**
+
+### Architecture Diagram
+![Command Pattern Diagram](images/command-diagram.png)
 
 ### Diagram: Command Pattern Flow
 ```
@@ -103,16 +219,80 @@ This encapsulates tasks for flexible execution.
 
 ---
 
+## 9. Facade Pattern for Simplified Interfaces
 
-9. Facade Pattern for Simplified Interfaces
-The Facade pattern provides a simplified interface to a complex subsystem, like a library with multiple modules. 
-It reduces complexity for clients and improves usability. Ensure the facade doesn’t become a bloated catch-all.
-<br> [Facade Example](src/main/java/com/xmacedo/facade/FacadeExample.java)
+**Purpose**: Provides a simplified interface to a complex subsystem.
 
-This simplifies the order process for clients.
+**Use Cases**:
+- Library with multiple modules
+- Complex API simplification
+- System integration layers
 
-10. Template Method Pattern for Reusable Algorithms
-- The Template Method pattern defines a skeleton for an algorithm, allowing subclasses to customize steps, 
-like a report generator. 
-It ensures consistency while allowing flexibility. Use it for processes with fixed steps but variable details.
-<br> [Template Method Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)
+**Key Benefits**:
+- Reduces complexity for clients
+- Improves usability
+- Hides implementation details
+
+**⚠️ Caution**: Ensure the facade doesn't become a bloated catch-all.
+
+**📝 [View Example](src/main/java/com/xmacedo/facade/FacadeExample.java)**
+
+---
+
+## 10. Template Method Pattern for Reusable Algorithms
+
+**Purpose**: Defines a skeleton for an algorithm, allowing subclasses to customize specific steps.
+
+**Use Cases**:
+- Report generators
+- Data processing pipelines
+- Framework hooks
+
+**Key Benefits**:
+- Ensures consistency while allowing flexibility
+- Promotes code reuse
+- Standardizes process flow
+
+**📝 [View Example](src/main/java/com/xmacedo/template_method/TemplateMethodExample.java)**
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Java 8 or higher
+- Maven or Gradle (for dependency management)
+
+### Running the Examples
+1. Clone this repository
+2. Navigate to the project directory
+3. Compile and run individual examples:
+   ```bash
+   javac src/main/java/com/xmacedo/[pattern]/[PatternName]Example.java
+   java com.xmacedo.[pattern].[PatternName]Example
+   ```
+
+## Best Practices
+
+- **Don't Overuse Patterns**: Apply patterns only when they solve real problems
+- **Keep It Simple**: Choose the simplest solution that meets your needs
+- **Document Your Decisions**: Explain why you chose specific patterns
+- **Consider Performance**: Some patterns add overhead - measure when necessary
+- **Test Thoroughly**: Patterns can add complexity - ensure good test coverage
+
+## Contributing
+
+Feel free to contribute by:
+- Adding new pattern examples
+- Improving existing documentation
+- Reporting issues or suggesting improvements
+- Adding unit tests for examples
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Happy Coding!** 🚀
+
